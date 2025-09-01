@@ -1,0 +1,30 @@
+#Familyroom SHT4x Temp Remote
+sensor:
+  #######################################
+  # SHT4x Temperature Remote With Battery
+  - name: "Remote SHT4x Temp Sensor Battery"
+    unique_id: remote_sht4x_battery_01
+    state_topic: "familyroom/temp/sht4x_01"
+    unit_of_measurement: "v"
+    value_template: "{{ value_json.batt }}"
+    
+  - name: "Remote SHT4x Temperature Sensor"
+    unique_id: remote_sht4x_temp_01
+    state_topic: "familyroom/temp/sht4x_01"
+    suggested_display_precision: 1
+    value_template: "{{ value_json.temperature }}"
+    
+  - name: "Remote SHT4x Humidity Sensor"
+    unique_id: remote_sht4x_humidity_01
+    state_topic: "familyroom/temp/sht4x_01"
+    value_template: "{{ value_json.humidity }}"
+    
+  - name: "Remote SHT4x Temp Sensor Power"
+    unique_id: remote_sht4x_pwr_01
+    state_topic: "familyroom/temp/sht4x_01"
+    value_template: "{{ value_json.pwr }}"
+
+  - name: "Remote SHT4x Temp Sensor WiFi Signal"
+    unique_id: remote_sht4x_wifisig_01
+    state_topic: "familyroom/temp/sht4x_01"
+    value_template: "{{ value_json.wifisig }}"
