@@ -12,11 +12,13 @@ sensor:
     unique_id: remote_sht4x_temp_01
     state_topic: "familyroom/temp/sht4x_01"
     suggested_display_precision: 1
+    unit_of_measurement: "°F"
     value_template: "{{ value_json.temperature }}"
     
   - name: "Remote SHT4x Humidity Sensor"
     unique_id: remote_sht4x_humidity_01
     state_topic: "familyroom/temp/sht4x_01"
+    unit_of_measurement: "%"
     value_template: "{{ value_json.humidity }}"
     
   - name: "Remote SHT4x Temp Sensor Power"
@@ -27,4 +29,5 @@ sensor:
   - name: "Remote SHT4x Temp Sensor WiFi Signal"
     unique_id: remote_sht4x_wifisig_01
     state_topic: "familyroom/temp/sht4x_01"
+    unit_of_measurement: "db"
     value_template: "{{ value_json.wifisig }}"
