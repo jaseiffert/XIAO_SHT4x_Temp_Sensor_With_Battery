@@ -29,5 +29,5 @@ sensor:
   - name: "Remote SHT4x Temp Sensor WiFi Signal"
     unique_id: remote_sht4x_wifisig_01
     state_topic: "familyroom/temp/sht4x_01"
-    unit_of_measurement: "db"
+    unit_of_measurement: "dBm"
     value_template: "{{ value_json.wifisig }}"
